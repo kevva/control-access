@@ -83,6 +83,11 @@ Type: `Object`
 The `response` object.
 
 
+## Related
+
+* [micro-access](https://github.com/kevva/micro-access) - Easy CORS handling for `micro`
+
+
 ## License
 
 MIT © [Kevin Mårtensson](https://github.com/kevva)
