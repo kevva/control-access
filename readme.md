@@ -72,15 +72,15 @@ Can be set globally with the `ACCESS_MAX_AGE` environment variable.
 
 #### request
 
-Type: `Object`
+Type: `http.IncomingMessage`
 
-The `request` object.
+Incoming HTTP request.
 
 #### response
 
-Type: `Object`
+Type: `http.ServerResponse`
 
-The `response` object.
+Response object.
 
 
 ## Related
