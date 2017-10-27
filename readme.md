@@ -60,7 +60,7 @@ Type: `string`
 
 [`Access-Control-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) specifies a URI that may access the resource.
 
-Can be set globally with the `ACCESS_ALLOW_ORIGIN` environment variable.
+Can be set globally with the `ACCESS_ORIGIN` environment variable.
 
 ##### maxAge
 
