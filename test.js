@@ -73,6 +73,15 @@ test('set allowOrigin', [macro, envMacro], {
 	}
 }, '*');
 
+test('set exposeHeaders', [macro, envMacro], {
+	opts: {exposeHeaders: ['Foo', 'Bar']},
+	header: 'access-control-expose-headers',
+	env: {
+		key: 'ACCESS_EXPOSE_HEADERS',
+		value: 'Foo,Bar'
+	}
+}, 'Foo,Bar');
+
 test('set maxAge', [macro, envMacro], {
 	opts: {maxAge: 1024},
 	header: 'access-control-max-age',

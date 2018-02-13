@@ -40,7 +40,7 @@ Can be set globally with the `ACCESS_ALLOW_CREDENTIALS` environment variable. Po
 
 ##### allowHeaders
 
-Type: `Array`
+Type: `Array` `string`
 
 [`Access-Control-Allow-Headers`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) is used in response to a preflight request to indicate which HTTP headers can be used when making the actual request.
 
@@ -48,7 +48,7 @@ Can be set globally with the `ACCESS_ALLOW_HEADERS` environment variable using a
 
 ##### allowMethods
 
-Type: `Array`
+Type: `Array` `string`
 
 [`Access-Control-Allow-Methods`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods) specifies the method or methods allowed when accessing the resource.
 
@@ -61,6 +61,14 @@ Type: `string`
 [`Access-Control-Allow-Origin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) specifies a URI that may access the resource.
 
 Can be set globally with the `ACCESS_ALLOW_ORIGIN` environment variable.
+
+##### exposeHeaders
+
+Type: `Array` `string`
+
+[`Access-Control-Expose-Headers`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Expose-Headers) response header indicates which headers can be exposed as part of the response.
+
+Can be set globally with the `ACCESS_EXPOSE_HEADERS` environment variable using a comma delimited string.
 
 ##### maxAge
 

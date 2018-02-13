@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = opts => (req, res) => {
 	opts = Object.assign({}, opts);
 
@@ -6,6 +7,7 @@ module.exports = opts => (req, res) => {
 	const allowHeaders = process.env.ACCESS_ALLOW_HEADERS || opts.allowHeaders;
 	const allowMethods = process.env.ACCESS_ALLOW_METHODS || opts.allowMethods;
 	const allowOrigin = process.env.ACCESS_ALLOW_ORIGIN || opts.allowOrigin;
+	const exposeHeaders = process.env.ACCESS_EXPOSE_HEADERS || opts.exposeHeaders;
 	const maxAge = process.env.ACCESS_MAX_AGE || opts.maxAge;
 
 	if (allowCredentials) {
@@ -32,6 +34,11 @@ module.exports = opts => (req, res) => {
 		if (allowOrigin !== '*') {
 			res.setHeader('vary', 'origin');
 		}
+	}
+
+	if (exposeHeaders) {
+		const val = Array.isArray(exposeHeaders) ? exposeHeaders.join(',') : exposeHeaders;
+		res.setHeader('Access-Control-Expose-Headers', val);
 	}
 
 	if (maxAge) {
